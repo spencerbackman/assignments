@@ -1,0 +1,18 @@
+
+
+div>header{
+    border: 2px solid pink;
+    text-align: center;
+}
+
+header {
+    border: 2px solid blue;
+    text-align: center;
+    font-size: 25px;
+    display: inline;
+}
+
+body {
+    columns: 150px 2;
+}
+
