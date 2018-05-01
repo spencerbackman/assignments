@@ -1,0 +1,67 @@
+* {
+    font-family: monospace;
+    column-count: auto
+}
+
+.container > div {
+    padding: 10px 14px;
+    text-align: center;
+    
+}
+
+.container {
+    color: gray; 
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+}
+
+h1, h2 {
+    font-size: 20px;
+}
+
+.container a.home {
+    color: gray;
+    text-decoration: none;
+}
+
+.container a.about {
+    color: gray;
+    text-decoration: none;
+}
+
+.container a.pricing {
+    color: gray;
+    text-decoration: none;
+}
+
+.container a.templates {
+    color: gray;
+    text-decoration: none;
+}
+
+.container a.props {
+    color: gray;
+    text-decoration: none;
+}
+
+.container a.contact {
+    color: gray;
+    text-decoration: none;
+}
+
+header {
+    font-size: 20px;
+    text-align: center;
+}
+
+.talia {
+    max-width: 300px;
+    max-height: 400px;
+    position: inherit;
+    
+}

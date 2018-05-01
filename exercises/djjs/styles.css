@@ -1,0 +1,12 @@
+h1 {
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+}
+
+#box2 {
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    font-weight: bold;
+}

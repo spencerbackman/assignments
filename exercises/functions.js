@@ -38,4 +38,4 @@ function strLength(string) {
     }
 }
 
-strLength("as;ieowkdnvie")
+

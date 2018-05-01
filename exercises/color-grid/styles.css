@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    font-size: 0px;
+}
+
+
+div {  
+    width: 100%;
+    height: 25px;
+    background-color: #f5c6d6;
+    position: absolute;
+    border: white solid 3px;
+}
+div1 {
+    width: 100%;
+    height: 25px;
+    background-color: #ee2e84;
+    position: absolute;
+    top: 35px;
+    border: white solid 3px;
+}
+div2 {
+    width: 100%;
+    height: 25px;
+    background-color: #ee2e84;
+    position: absolute;
+    top: 62px;
+    border: white solid 3px;
+}
+div3 {
+    width: 100%;
+    height: 25px;
+    background-color: #ee2e84;
+    position: absolute;
+    top: 89px;
+    border: white solid 3px;
+}
+div4 {
+    width: 100%;
+    height: 25px;
+    background-color: #ee2e84;
+    position: absolute;
+    top: 116px;
+    border: white solid 3px;
+}
+div5 {
+    width: 100%;
+    height: 25px;
+    background-color: #85cfd8;
+    position: absolute;
+    top: 144px;
+    border: white solid 3px;
+}
+div6 {
+    width: 100%;
+    height: 25px;
+    background-color: #85cfd8;
+    position: absolute;
+    top: 172px;
+    border: white solid 3px;
+}
+div7 {
+    width: 100%;
+    height: 25px;
+    background-color: #8dc63f;
+    position: absolute;
+    top: 200px;
+    border: white solid 3px;
+}
+div8 {
+    width: 100%;
+    height: 25px;
+    background-color: #e76e34;
+    position: absolute;
+    top: 228px;
+    border: white solid 3px;
+}
+
+
+
+@media (min-width: 500px){ 
+div{
+    width: 100%;
+    height: 100px;
+    background-color: #f5c6d6;
+    position: absolute;
+}
+div1 {
+    width: 25%;
+    height: 100px;
+    background-color: #ee2e84;
+    position: absolute;
+    top: 105px;
+}
+div2 {
+    width: 25%;
+    height: 100px;
+    background-color: #ee2e84;
+    position: absolute;
+    top: 105px;
+    left: 25%;
+}
+div3 {
+    width: 25%;
+    height: 100px;
+    background-color: #ee2e84;
+    position: absolute;
+    top: 105px;
+    left: 50%
+}
+div4 {
+    width: 25%;
+    height: 100px;
+    background-color: #ee2e84;
+    position: absolute;
+    top: 105px;
+    left: 75%;
+}
+div5 {
+    width: 50%;
+    height: 100px;
+    background-color: #85cfd8;
+    top: 203px;
+}
+div6 {
+    width: 50%;
+    height: 100px;
+    background-color: #85cfd8;
+    top: 203px;
+    left: 50%;
+}
+div7 {
+    width: 75%;
+    height: 100px;
+    background-color: #8dc63f;
+    top: 300px;
+}
+div8 {
+    width: 25%;
+    height: 100px;
+    background-color: #e76e34;
+    top: 300px;
+    left: 75%;
+}
+}
