@@ -1,0 +1,80 @@
+var menu = {
+    "appetizers": [ {
+        "appetizer1": "guacamole",
+        "ingredients1": ["avocado", "salt", "lime"],
+        "description": "avocado dip that goes great with chips"
+    }, {
+        "appetizer2": "chips",
+        "ingredients2": ["flour", "water"],
+        "description": "flour chips served warm"
+    }, {
+        "appetizer3": "salsa",
+        "ingredients3": ["tomato", "peppers", "sugar"],
+        "description": "tomatos, onions, peppers, all cut up perfect to eat with chips"
+    }, {
+        "appetizer4": "salad",
+        "ingredients4": ["lettuce", "cheese", "tomatos", "peppers"],
+        "description": "Salad is a green bowl full of fresh veggies" 
+   }
+],
+    "coldSandwiches": [
+        {
+            "sandwich1": "ham and cheese",
+            "ingredients1": ["ham", "cheese", "bread"],
+            "description1": "ham cheese and bread thrown together for your satisfaction"
+        }, {
+            "sandwich2": "tuna",
+            "ingredients2": ["tuna", "bread"],
+            "description2": "tuna fish sandwich to spice up your day"
+        }, {
+            "sandwich3": "blt",
+            "ingredients3": ["bacon", "lettuce", "tomatos"],
+            "description3": "here we have our beastly blt sandwich"
+        }
+    ],
+    "hotSandwiches": [
+        { 
+            "hSandwich1": "grilled cheese",
+            "ingredients1":["cheese", "bread"],
+            "description1": "melted cheese between two slices of bread "
+        }, {
+            "hSandwich2": "grilled ham and cheese",
+            "ingredients2": ["bread", "ham", "cheese"],
+            "description2": "melted cheese betweeen two slices of bread with ham"
+        }, {
+            "hSandwich3": "grilled blt",
+            "ingredients3": ["bacon", "lettuce", "tomato"],
+            "description3": "grilled blt sandwich"
+        }
+    ],
+    "desserts": [
+        {
+            "dessert1": "chocolate cake",
+            "ingredient1": ["chocolate", "flour", "more chocolate"],
+            "description1": "A chocolate cake that will feel as if it melts in your mouth"
+        }, {
+            "dessert2": "brownies",
+            "ingredient2": ["chocolate", "brownie mix", "eggs"],
+            "description2": "Special brownies"
+        }, {
+            "dessert3": "ice cream",
+            "ingredient3": ["milk", "ice", "cream"],
+            "description": "pick between vanilla, chocolate, pistachio, and hazelnut"
+        }
+    ],
+    "drinks": [
+        {
+            "drink1": "mojito",
+            "ingredient1": ["lemon", "lime", "lots of alc"],
+            "description": "are you a fan of lemonade? get a mojito."
+        }, {
+            "drink2": "pina colada",
+            "ingredient2": ["coconut", "pineapple", "malibu rum"],
+            "description2": "Pineapple and coconut mixed with rum count me in"
+        }, {
+            "drink3": "screwdriver",
+            "ingredient3": ["orange juice", "vodka"],
+            "description": "had a long day? take a screwdriver"
+        }
+    ]
+}

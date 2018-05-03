@@ -47,9 +47,9 @@ if(walk) {
                         }
                         
                     } 
-                // } else if(options[attack] === 'ATTACK!!!') {
-                //     var d3 = damage;
-                //     d3 - drogoHP;
+                } else if(options[attack] === 'ATTACK!!!') {
+                    var d3 = damage;
+                    d3 - drogoHP;
                     if(drogoHP <= 0) {
                         drogoIsAlive = false;
                         console.log("You have killed the great dragon Drogo! Congradulations enjoy a health potion to give you full health and a helmet to help protect you!")
@@ -59,7 +59,7 @@ if(walk) {
                     var attack1 = ask.keyInSelect(options, "Now that drogo has ${drogoHP} what will you do?")
                 }
             }
-        } else if(num < .66 && num > .33) {
+         else if(num < .66 && num > .33) {
             var attack = ask.keyInSelect(options, "You've been challeged by John Snow! What wiil you do?")
               
              } else if(num >= .66) {
@@ -67,6 +67,7 @@ if(walk) {
         }
  
     } 
+}
 }
 
 

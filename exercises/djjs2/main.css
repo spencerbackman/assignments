@@ -1,0 +1,87 @@
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    position: absolute;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out
+}
+
+.box:hover {
+    box-shadow: orangered;
+    border-radius: 50%;
+    background-color: papayawhip
+}
+
+.box1{
+    width: 200px;
+    height: 200px;
+    background-color: bisque;
+    position: absolute;
+    top: 200px;
+    transition: all 2s
+}
+
+.box1:hover {
+    width: 100%;
+    height: 100%;
+    background-color: seagreen
+}
+
+.box2{
+    width: 200px;
+    height: 200px;
+    background-color: darkorchid;
+    position: absolute;
+    top: 400px;
+    transition: all 2s
+}
+
+.box2:hover {
+    width: 100%;
+    background-color: slateblue
+}
+
+.box3{
+    width: 200px;
+    height: 200px;
+    background-color: gold;
+    position: absolute;
+    top: 600px;
+    transition: all 2s
+}
+
+.box3:hover {
+    border: 5px solid black;
+    box-shadow: royalblue;
+    background-color: white
+}
+
+.box4{
+    width: 200px;
+    height: 200px;
+    background-color: royalblue;
+    position: absolute;
+    top: 800px;
+    transition: all 1s
+}
+
+.box4:hover {
+    position: inherit;
+    background-color: tomato
+}
+
+.box5{
+    width: 200px;
+    height: 200px;
+    background-color: powderblue;
+    position: absolute;
+    top: 1000px;
+    transition: all 5s
+}
+
+.box5:hover {
+    opacity: 300px;
+    background-color: honeydew
+}
