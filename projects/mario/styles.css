@@ -126,3 +126,31 @@ div4 {
     position: relative;
     font-size: 20px;
 }
+
+#total4 {
+    position: absolute;
+    bottom: 120px;
+}
+
+#total2 {
+    position: absolute;
+    bottom: 120px;
+    left: 160px;
+}
+
+#total {
+    position: absolute;
+    bottom: 120px;
+    left: 80px
+}
+
+#total3 {
+    position: absolute;
+    bottom: 120px;
+    left:  240px
+}
+#total6 {
+    position: absolute;
+    bottom: 120px;
+    left: 320px
+}

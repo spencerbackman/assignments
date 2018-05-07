@@ -4,7 +4,6 @@ function goomba(e){
     var a = parseInt(nums);
     var sum = a * 5;
     document.getElementById("total").innerHTML = sum + " coins";
-
 }
 
 
@@ -31,13 +30,17 @@ function cheepCheep(e){
 }
 document.cheepCheep.addEventListener("submit", cheepCheep)
 
-document.total4.addEventListener("submit", function(e){
-    e.preventDefault();
-var ghowmany = document.goomba.value
-var bhowmany = document.bobomb.value
-var chowmany = document.cheepCheep.value
 
-document.getElementById("total6").innerHTML = `${(ghowmany * 5) + (bhowmany * 7) + (chowmany * 11)}` 
+
+var total4 = document.getElementById('total4')
+
+total4.addEventListener("click", function(e){
+    e.preventDefault();
+var g = document.goomba.input.value
+var b = document.bobomb.input.value
+var c = document.cheepCheep.input.value
+var sum = (g * 5) + (b * 7) + (c * 11)
+document.getElementById("total6").innerHTML = `Your total for today is ${sum} coins!`;
 })
 
 

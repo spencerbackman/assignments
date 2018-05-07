@@ -12,27 +12,32 @@ var wizards = [
     {
       name: "Edwin Odesseiron",
       age: 37,
-      alignment: "lawful evil"
+      alignment: "lawful evil",
+      isAlive: true
     },
     {
       name: "Harry Potter",
       age: 21,
-      alignment: "neutral good"
+      alignment: "neutral good",
+      isAlive: true
     },
     {
       name: "Hermony Granger",
       age: 21,
-      alignment: "lawful good"
+      alignment: "lawful good",
+      isAlive: true
     },
     {
       name: "Ronny the Bear",
       age: 21,
-      alignment: "neutral good"
+      alignment: "neutral good",
+      isAlive: true
     },
     {
       name: "Gandalf",
       age: 100,
-      alignment: "neutral good"
+      alignment: "neutral good",
+      isAlive: true
     }
   ]
 

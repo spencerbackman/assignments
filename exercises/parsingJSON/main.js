@@ -1,7 +1,7 @@
 var xhr = new XMLHttpRequest();
 
 xhr.onreadystatechange = function parsePokemon() {
-    document.getElementById("name").innerHTML = 
+    document.getElementById("name").innerHTML = pokemon.name
 }
 
 
