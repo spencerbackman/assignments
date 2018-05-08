@@ -35,15 +35,21 @@ while(player.hp > 0) {
 
 
 function walk() {
-    var walking = ask.keyIn(`hello ${name} push W to walk`, {limit: "w,p"});
+    var walking = ask.keyIn(`hello ${name} push W to walk`, {limit: "w,p,u"});
     if(walking === "w") {
-        if(Math.random() < .25){
+        if(Math.random() < .35){
             fight();
         } else {
             console.log("You didn't run into a monster.")
         }
-    } else {
+    } else if(walking === "p") {
         console.log(player);
+    } else{
+        player.hp = 100;
+        console.log(player);
+        if(player.item === "heath potion") {
+            player.item === "none"
+        }
     }
 }
 
@@ -54,23 +60,64 @@ function fight() {
    if(rOrF[runOrFight] === "run") {
     run();
 } else {
-    fight();
+    attackEnemy();
 }
-   
-   enemyCreation();
 }
 
 function attackEnemy() {
-    var damage = Math.random() * 100 + 1;
-    enemy["hp"] = enemy["hp"] - damage;
-    console.log(`The enemy has ${enemy["hp"]}.`);
-    if(enemy["hp"] < 1) {
-        die();
+    var num = Math.random();
+    if(num <= .33) {
+        if(enemy['hp'] < 1) {
+            console.log("the enemy is dead");
+        } else {
+        console.log(`Your enemy is ${enemy["name"]}`);
+        var damage = Math.floor(Math.random() * 75);
+        enemy["hp"] = enemy['hp'] - damage;
+        console.log(`The enemy lost ${damage} hp. The enemy now has ${enemy["hp"]} hp.`);
+        if(enemy['hp'] < 1) {
+            console.log(`you've killed ${enemy['name']} you have a new item push u to use what you got!`);
+            enemyDie();
+        }
+    }
+    } else if(num > .33 && num < .66) {
+        if(enemy2['hp'] < 1) {
+            console.log("the enemy is dead")
+        } else {
+        console.log(`Your enemy is ${enemy2["name"]}`)
+        var damage2 = Math.floor(Math.random() * 75);
+        enemy2["hp"] = enemy2['hp'] - damage2;
+        console.log(`The enemy lost ${damage2} hp. The enemy now has ${enemy2["hp"]} hp.`)
+        if(enemy2['hp'] < 1) {
+            console.log(`you've killed ${enemy2['name']} you have a new item push u to use what you got!`);
+            enemyDie();
+        }
+    }
+    } else if(num >= .66) {
+        if(enemy3['hp'] < 1) {
+            console.log('the enemy is dead')
+        } else {
+        console.log(`Your enemy is ${enemy3["name"]}`);
+        var damage3 = Math.floor(Math.random() * 75);
+        enemy3['hp'] = enemy3['hp'] - damage3;
+         console.log(`The enemy lost ${damage3} hp. The enemy now has ${enemy3["hp"]} hp.`);
+            if(enemy["hp"] < 1) {
+        console.log(`you've killed ${enemy3['name']} you have a new item push u to use what you got!`);
+        
+        enemyDie();
     }
 }
+    }
+
+}
+
+function enemyDie() {
+    player.item = "health potion";
+    console.log("The enemy is dead congrats :)")
+}
+
 
 function enemyAttack() {
-    var damage = Math.random() * 50;
+    var damage = Math.floor(Math.random() * 50);
     player['hp'] = player["hp"] - damage;
     console.log(`${name} the enemy hit you and you lost ${damage} hp.`);
     if(player['hp'] < 1) {
@@ -78,27 +125,8 @@ function enemyAttack() {
     }
 }
 
-
 function die() {
-  console.log("dead")
-}
-
-function enemyDie() {
-    if(enemy.hp <= 0) {
-        console.log(`Congrats ${name} you've defeated the enemy`)
-    }
-}
-
-function enemyCreation() {
-    var num = Math.random();
-  if(num <= .33) {
-      console.log(`Your enemy is ${enemy["name"]}`);
-  } else if(num > .33 && num < .66) {
-      console.log(`Your enemy is ${enemy2["name"]}`)
-  } else {
-      console.log(`Your enemy is ${enemy3["name"]}`)
-  }
-
+  console.log("you're dead")
 }
 
 function run() {

@@ -2,7 +2,15 @@
 
 // var doubleNums = arr.map(function(num) {
 //     return num * 2;
-// })
+// });4
+
+// console.log(doubleNum())
+
+// function doubleNum(arr) {
+//     arr.map(function(num){
+//         return num * 2;
+//     })
+// }
 
 // console.log(doubleNums);
 
@@ -37,14 +45,14 @@
 //     }
 // ]);
 
-// function namesOnly(arr) {
-//     var newArr = [];
-//     var names = arr.map(function(array){
-//         newArr.push(array.name)
-//     })
-//     return newArr;
-// }
-// console.log(namesOnly(arr));
+function namesOnly(arr) {
+    var newArr = [];
+    var names = arr.map(function(array){
+        newArr.push(array.name)
+    })
+    return newArr;
+}
+console.log(namesOnly(arr));
 
 
 
@@ -163,40 +171,40 @@
 // console.log(illuminati(clubMembers));
 
 
-var peeps = ([  
-    {
-        name: "Angelina Jolie",
-        age: 80
-    },
-    {
-        name: "Eric Jones",
-        age: 2
-    },
-    {
-        name: "Paris Hilton",
-        age: 5
-    },
-    {
-        name: "Kayne West",
-        age: 16
-    },
-    {
-        name: "Bob Ziroll",
-        age: 100
-    }
-])
+// var peeps = ([  
+//     {
+//         name: "Angelina Jolie",
+//         age: 80
+//     },
+//     {
+//         name: "Eric Jones",
+//         age: 2
+//     },
+//     {
+//         name: "Paris Hilton",
+//         age: 5
+//     },
+//     {
+//         name: "Kayne West",
+//         age: 16
+//     },
+//     {
+//         name: "Bob Ziroll",
+//         age: 100
+//     }
+// ])
 
 
-function ofAge(arr) {
-    var newArr = [];
-    arr.filter(function(array){
-        if(array.age >= 18) {
-            newArr.push(array.name);
-        }
-    })
-    return newArr;
-}
+// function ofAge(arr) {
+//     var newArr = [];
+//     arr.filter(function(array){
+//         if(array.age >= 18) {
+//             newArr.push(array.name);
+//         }
+//     })
+//     return newArr;
+// }
 
 
 
-console.log(ofAge(peeps))
+// console.log(ofAge(peeps))
