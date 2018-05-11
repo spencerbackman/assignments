@@ -1,0 +1,31 @@
+* {
+    font-family: monospace
+}
+
+
+#bike {
+   width: 100%;
+   max-height: 500px;
+}
+h1 {
+    position: absolute;
+    text-align: center
+}
+
+body {
+    margin: 0
+}
+
+@media(max-width: 500px) {
+    #bike {
+        width: 100%;
+        height: auto
+    }
+}
+
+@media(max-width: 600px) {
+    #bike {
+        width: 100%;
+        height: auto
+    }
+}
