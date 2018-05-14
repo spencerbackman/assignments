@@ -1,6 +1,13 @@
 * {
     text-align: center
 }
+
+<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville" rel="stylesheet">
+font-family: 'Libre Baskerville', serif;
+font-family: 'Julius Sans One', sans-serif;
+
+
+
 h1 {
     font-family: 'Julius Sans One', sans-serif;
 }
