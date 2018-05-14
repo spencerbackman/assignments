@@ -1,7 +1,14 @@
 import React from 'react';
+import './index.css'
 
 const App = () => {
     return(
-        <h1>Hello World!</h1>
+        <div>
+        {/* //     <Navbar />
+        //     <Content />
+        //     <Footer /> */}
+        </div>
     )
 }
+
+export default App;
