@@ -1,0 +1,10 @@
+li {
+    display: inline;
+}
+li a {
+    display: block;
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: none;
+    border: black solid 1px;
+}

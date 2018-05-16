@@ -6,7 +6,7 @@ const Footer = () => {
        <footer> 
            <li><a> Posted By: Spencer Backman</a> </li>
             <li><a> I'm good at this </a></li>
-       </footer>
+       </footer> 
     )
 }
 

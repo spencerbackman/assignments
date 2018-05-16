@@ -1,18 +1,22 @@
-* {
-    text-align: center
-}
-
-<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville" rel="stylesheet">
-font-family: 'Libre Baskerville', serif;
-font-family: 'Julius Sans One', sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville")
 
 
+
+
+/* font-family: 'Libre Baskerville', serif;
+font-family: 'Julius Sans One', sans-serif; */
 
 h1 {
-    font-family: 'Julius Sans One', sans-serif;
+    font-size: 40px;
 }
 
-h3 {
+h2 {
+    font-size: 20px;
+}
+
+h1, h2, h3 {
+    color: white;
+    font-weight: 100; 
     font-family: 'Julius Sans One', sans-serif;
 }
 
@@ -52,5 +56,26 @@ header {
 .bar {
     background-image: url("http://www.csszengarden.com/214/koi.jpg");
     height: 200px;
-    font-size: 30px
+    font-size: 30px;
+    color: white;
+}
+
+footer {
+   clear: both;
+   padding: 3em 10%;
+   color: #fff;
+   background: #134347;
+   text-align: center;
+}
+
+footer a {
+    display: inline-block;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    padding: 40px 0 0 0;
+    margin: 0 0.5em;
+    position: relative;
+    color: rgba(255, 255, 255, 0.5);
+
 }

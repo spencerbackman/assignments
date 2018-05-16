@@ -61,3 +61,13 @@
 //   }
 
 
+// const populatePeople = arr => {
+//     return arr.map(name => {
+//        return {
+//            firstName: 
+//            lastName: 
+//        }
+//     })
+// }
+
+// console.log(populatePeople(["Frank Peterson", "Suzy Degual", "Liza Jones"]))
