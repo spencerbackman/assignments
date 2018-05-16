@@ -1,14 +1,10 @@
 import React from 'react';
+import Friendlist from './Friendlist';
+import Friend from './Friend';
+import Pet from './Pet';
 
-const Friends = () => {
-    return (
-        <div>Hello</div>
-    )
-}
-
-export default Friends;
-
-const friends = [  
+const App = () => {
+  const friends = [  
     {
       name: "Ben",
       age: 29,
@@ -65,3 +61,12 @@ const friends = [
       ]
     }
   ]
+    return (
+      <div>
+        <Friendlist friends={friends} />
+      </div>
+    )
+}
+
+export default App;
+

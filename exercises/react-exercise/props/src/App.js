@@ -30,12 +30,7 @@ const App = () => {
               <Welcome title="got milk?"
             subtitle='moo' 
             info="im a brown cow ;)"/>
-            <Form />
-            <Form />
-            <Form />
-            <Form />
-            <Form />
-            <Form />
+          
         </div>
 
     );

@@ -1,9 +1,13 @@
 import React from 'react';
 
 
-const Pet = () => {
+
+const Pet = (props) => {
+
     return (
-        <div>420</div>
+        <div>
+            <h3> Name: {props.name}, Breed: {props.breed}</h3>
+        </div>
     )
 }
 
