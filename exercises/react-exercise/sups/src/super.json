@@ -1,0 +1,11 @@
+{
+    "supers": [
+        {
+            "Name": "Green latern",
+            "power": "super ring"
+        },{
+            "Name": "Og",
+            "power": "flower"
+        }
+    ]
+}

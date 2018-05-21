@@ -1,8 +1,8 @@
 var todoUrl = "https://api.vschool.io/spencer/todo/";
 var display = document.getElementById('todos');
 
-var todoId = "https://api.vschool.io/spencer/todo/_id"
-console.log(todoId)
+var todoId = "https://api.vschool.io/spencer/todo/_id";
+
 axios.get(todoUrl).then(function(response){
     displayData(response.data)
 });
@@ -13,7 +13,7 @@ document.addTodo.addEventListener('submit', function(e){
     var newTodo = {
         title: document.addTodo.title.value,
         description: document.addTodo.description.value,
-        price: document.addTodo.price.value,
+        price: document.addTodo.price.value
     }
 
 

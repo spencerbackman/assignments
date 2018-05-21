@@ -1,0 +1,16 @@
+{
+    "superHeroes": [
+        {
+            "name": "Kick-Ass",
+            "imgUrl": "https://www.google.com/search?q=kickass&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiQusb6vY3bAhVhzoMKHXfnDwUQ_AUICigB&biw=1097&bih=722#imgrc=fbf6dD_e4RVYCM:",
+            "catchPhrase": "I'm Kick-Ass"
+        },
+        {
+            "name": "Big-Daddy",
+            "imgUrl": "https://www.google.com/search?rlz=1C5CHFA_enUS741US741&biw=1097&bih=722&tbm=isch&sa=1&ei=hdj9WrW5C5jmjwTIqpLADA&q=kick+ass+big+daddy+shotting+hit+girl&oq=kick+ass+big+daddy+shotting+hit+girl&gs_l=img.3...9599.13048.0.13336.18.18.0.0.0.0.129.1608.13j4.17.0....0...1c.1.64.img..1.0.0....0.zM9K4aKVgiM#imgrc=zwoxwGNaJ5C7AM:",
+            "catchPhrase": "You're gonna be fine, baby doll"
+        }
+    ]
+}
+
+
