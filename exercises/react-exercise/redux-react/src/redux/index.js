@@ -11,7 +11,7 @@ function reducer(prevState = {contactList:[]}, action){
         case 'ADD_USER':
             return {
                contactList: [...prevState.contactList, action.contact]
-            }
+            } 
         default:
             return prevState
     }
