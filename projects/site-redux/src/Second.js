@@ -14,7 +14,7 @@ class Second extends React.Component {
     render() {
         return (
             <div>
-                <h1>Name: { this.props.houseData.name }  </h1>
+                <h1>{ this.props.houseData.name }  </h1>
                 <h3>Region: { this.props.houseData.region} </h3>
                 <h3>Coat of Arms: { this.props.houseData.coatOfArms } </h3>
                 <h3>Founded: { this.props.houseData.founded } </h3>

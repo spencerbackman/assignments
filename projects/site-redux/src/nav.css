@@ -1,6 +1,6 @@
 .a {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(4, auto);
     background-color: cornsilk;
     font-size: 15px;
     text-align: center;
@@ -21,4 +21,24 @@
 .three {
     text-decoration: none;
     border: 1px solid grey;
+}
+
+.four {
+  text-decoration: none;
+  border: 1px solid grey;
+}
+
+.five {
+  text-decoration: none;
+  border: 1px solid grey;
+}
+
+.six {
+  text-decoration: none;
+  border: 1px solid grey;
+}
+
+.seven {
+  text-decoration: none;
+  border: 1px solid grey;
 }
