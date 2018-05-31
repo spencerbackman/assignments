@@ -1,0 +1,16 @@
+* {
+    font-family: monospace;
+}
+
+.doggo {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.but {
+    position: absolute;
+    left: 0px;
+    top: 560px;
+    height: 40px;
+    width: 80px;
+}
