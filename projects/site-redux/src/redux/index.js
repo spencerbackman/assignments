@@ -35,7 +35,26 @@ const initialState = {
     dadJokes: {
       joke: ''
     },
-    ronQuotes: ''
+    ronQuotes: '',
+    weatherData: {
+      results: {
+      sunrise: '',
+      sunset: '',
+      solar_noon: '',
+      day_length: ''
+    }
+    }
+}
+
+export const getWeather = () => {
+  return dispatch => {
+    axios.get('https://vschool-cors.herokuapp.com?url=https://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400&date=2018-06-01').then(response => {
+      dispatch({
+        type: 'GET_WEATHER',
+        weatherData: response.data
+      })
+    })
+  }
 }
 
 export const getRonQuotes = () => {
@@ -131,7 +150,8 @@ const reducer = (state = initialState , action) => {
                 bookData: state.bookData,
                 jokeData: state.jokeData,
                 dadJokes: state.dadJokes,
-                ronQuotes: state.ronQuotes
+                ronQuotes: state.ronQuotes,
+                weatherData: state.weatherData
             }
         case 'GET_NEW_DATA':
             return {
@@ -141,7 +161,8 @@ const reducer = (state = initialState , action) => {
                 bookData: state.bookData,
                 jokeData: state.jokeData,
                 dadJokes: state.dadJokes,
-                ronQuotes: state.ronQuotes
+                ronQuotes: state.ronQuotes,
+                weatherData: state.weatherData
             }
         case 'GET_DOG_DATA':
             return {
@@ -151,7 +172,8 @@ const reducer = (state = initialState , action) => {
                 bookData: state.bookData,
                 jokeData: state.jokeData,
                 dadJokes: state.dadJokes,
-                ronQuotes: state.ronQuotes
+                ronQuotes: state.ronQuotes,
+                weatherData: state.weatherData
             }
       case 'GET_BOOK_DATA':
            return {
@@ -161,7 +183,8 @@ const reducer = (state = initialState , action) => {
              data: state.data,
              jokeData: state.jokeData,
              dadJokes: state.dadJokes,
-             ronQuotes: state.ronQuotes
+             ronQuotes: state.ronQuotes,
+             weatherData: state.weatherData
            }
       case 'GET_JOKE_DATA':
           return {
@@ -171,7 +194,8 @@ const reducer = (state = initialState , action) => {
             houseData: state.houseData,
             data: state.data,
             dadJokes: state.dadJokes,
-            ronQuotes: state.ronQuotes
+            ronQuotes: state.ronQuotes,
+            weatherData: state.weatherData
           }
       case 'GET_DAD_JOKES':
           return {
@@ -181,11 +205,24 @@ const reducer = (state = initialState , action) => {
             houseData: state.houseData,
             data: state.data,
             jokeData: state.jokeData,
-            ronQuotes: state.ronQuotes
+            ronQuotes: state.ronQuotes,
+            weatherData: state.weatherData
           }
       case 'GET_RON_QUOTES':
           return {
             ronQuotes: action.ronQuotes,
+            dadJokes: state.dadJokes,
+            bookData: state.bookData,
+            dogData: state.dogData,
+            houseData: state.houseData,
+            data: state.data,
+            jokeData: state.jokeData,
+            weatherData: state.weatherData
+          }
+      case 'GET_WEATHER':
+          return {
+            weatherData: action.weatherData,
+            ronQuotes: state.ronQuotes,
             dadJokes: state.dadJokes,
             bookData: state.bookData,
             dogData: state.dogData,
@@ -198,6 +235,7 @@ const reducer = (state = initialState , action) => {
     }
 }
 
-const store = createStore(reducer, applyMiddleware(thunk))
+const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ &&
+       window.__REDUX_DEVTOOLS_EXTENSION__(), applyMiddleware(thunk))
 
 export default store;

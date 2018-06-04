@@ -8,6 +8,7 @@ import Fourth from './Fourth';
 import Fifth from './Fifth';
 import Sixth from './Sixth';
 import Seven from './Seven';
+import Eight from './Eight';
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/fifth" component={Fifth} />
             <Route path="/sixth" component={Sixth} />
             <Route path="/seven" component={Seven} />
+            <Route path="/eight" component={Eight} />
         </Switch>
         </div>
     )

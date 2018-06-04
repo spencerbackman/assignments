@@ -1,44 +1,39 @@
-.a {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    background-color: cornsilk;
-    font-size: 15px;
-    text-align: center;
-    padding: 14px 16px;
-    font-family: monospace;
-}
-
 .one {
-    text-decoration: none;
-    border: 1px solid grey;
+  text-decoration: none;
+  color: lightblue;
 }
 
 .two {
-    text-decoration: none;
-    border: 1px solid grey;
+  text-decoration: none;
+  color: lightblue;
 }
 
 .three {
-    text-decoration: none;
-    border: 1px solid grey;
+  text-decoration: none;
+  color: lightblue;
 }
 
 .four {
   text-decoration: none;
-  border: 1px solid grey;
+  color: lightblue;
 }
 
 .five {
   text-decoration: none;
-  border: 1px solid grey;
+  color: lightblue;
 }
 
 .six {
   text-decoration: none;
-  border: 1px solid grey;
+  color: lightblue;
 }
 
 .seven {
   text-decoration: none;
-  border: 1px solid grey;
+  color: lightblue;
+}
+
+.eight {
+  text-decoration: none;
+  color: lightblue;
 }

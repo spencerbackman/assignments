@@ -2,14 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { getBookData } from './redux';
-import game from "./images/game.jpeg"
+import game from "./images/game.jpeg";
+import './fourth.css';
 
 class Fourth extends React.Component {
   componentDidMount() {
     this.props.getBookData()
   }
   render() {
-    console.log(this.props.bookData)
     return (
       <div>
           <h1> {this.props.bookData.name} </h1>

@@ -8,9 +8,14 @@ class Seven extends React.Component {
     this.props.getRonQuotes()
   }
   render() {
+    function refreshPage(){
+        window.location.reload()
+    }
     return (
       <div>
+      <h1> Quotes by Ron Swanson </h1>
         <h1> { this.props.ronQuotes } </h1>
+        <button className='but' type="submit" onClick={refreshPage}>New Quote</button>
       </div>
     )
   }

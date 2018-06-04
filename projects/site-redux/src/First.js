@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { getData } from './redux';
 import './first.css'
-
 import jon from './images/jon.jpeg'
 
 class First extends React.Component {
 componentDidMount() {
     this.props.getData()
 }
+
 render() {
     return (
             <div>
@@ -22,8 +22,7 @@ render() {
                 <h3> Titles: { this.props.data.titles } </h3>
                 </div>
                 <img className='jon' src={jon} alt='jon snow' />
-
-            </div>
+              </div>
     )
 }
 }
