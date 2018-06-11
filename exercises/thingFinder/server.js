@@ -10,6 +10,16 @@ const flower = [
   {strain: 'bubba og', type: 'indica'}
 ]
 
+app.use((req, res, next) => {
+  req.dinosaur = "T-rex";
+  next();
+})
+
+app.use((req, res, next) => {
+  console.log(req.dinosaur)
+  next();
+})
+
 app.get("/flower",(req, res) => {
   res.send(flower)
 })

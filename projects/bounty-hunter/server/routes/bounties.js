@@ -1,43 +1,41 @@
 const express = require('express');
-const uuid = require('uuid/v1');
 const bountyRoutes = express.Router();
+const Bounty = require("../models/bnty")
 
-const bounties = [
-  {name: 'Boba Fett', weapon: 'blaster', id: 1},
-  {name: 'Darth Vador', weapon: 'lightsaber', id: 2},
-  {name: 'Kylo Ren', weapon: 'lightsaber', id: 3},
-  {name: 'Han Solo', weapon: 'blaster', id:4}
-]
 
 bountyRoutes.route('/')
 .get((req, res) => {
-  res.send(bounties)
+  Bounty.find((err, bounties) => {
+    if(err) return res.status(500).send(err);
+    return res.send(bounties)
+  })
 })
 .post((req, res) => {
-  req.body.id = uuid();
-  bounties.push(req.body);
-  res.send(req.body);
+  const newBounty = new Bounty(req.body);
+  newBounty.save((err, savedBounty) => {
+      if(err) return res.status(500).send(err);
+      return res.send(savedBounty)
+  })
 })
 
 bountyRoutes.route('/:id')
 .get((req, res) => {
-  const foundBounty = bounties.find(bounty => bounty.id === parseInt(req.params.id))
-  res.send(foundBounty);
+  Bounty.findOne({ _id: req.params.id }, (err, foundBounty) => {
+        if(err) return res.status(500).send(err);
+        return res.send(foundBounty);
+  })
 })
 .put((req, res) => {
-  const foundBounty = bounties.find(bounty => bounty.id === parseInt(req.params.id))
-  const newBounty = Object.assign(foundBounty, req.body);
-  res.send(req.body);
+  Bounty.findByIdAndUpdate(req.params.id, req.body, (err, updatedBounty) => {
+    if(err) return res.status(500).send(err);
+    return res.status(201).send(updatedBounty)
+  })
 })
 .delete((req, res) => {
-  const foundBounty = bounties.find(bounty => bounty.id === parseInt(req.params.id))
-  const index = bounties.indexOf(foundBounty)
-  bounties.splice(index, 1);
-  res.send("You've succesfully deleted the bounty")
+  Bounty.findByIdAndRemove(req.params.id, (err, removedBounty) => {
+    if(err) return res.status(500).send(err);
+    return res.send(removedBounty)
+  })
 })
-
-
-
-
 
 module.exports = bountyRoutes;
