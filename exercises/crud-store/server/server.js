@@ -8,12 +8,12 @@ app.use(bodyParser.json())
 app.use(morgan('dev'))
 
 mongoose.connect('mongodb://localhost/taskmanager', (err) => {
-  if(err) throw err;
-  console.log("connected to the database")
+    if(err) throw err
+    console.log("connected to the database")
 })
 
-app.use('/bounty', require('./routes/bounties'))
+app.use('/inventory', require('./routes/inventory'))
 
-app.listen(5400, () => {
-  console.log('server is running on port 5400')
+app.listen(7000, () => {
+    console.log("server is running on port 7000")
 })

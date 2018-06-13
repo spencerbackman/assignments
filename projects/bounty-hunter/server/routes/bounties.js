@@ -1,41 +1,40 @@
-const express = require('express');
-const bountyRoutes = express.Router();
-const Bounty = require("../models/bnty")
+const express = require('express')
+const bountyRouter = express.Router()
+const Bounty = require('../models/bnty')
 
 
-bountyRoutes.route('/')
-.get((req, res) => {
+bountyRouter.get('/', (req, res) => {
   Bounty.find((err, bounties) => {
-    if(err) return res.status(500).send(err);
-    return res.send(bounties)
+    if(err) return res.status(500).send(err)
+    return res.status(200).send(bounties)
   })
 })
-.post((req, res) => {
-  const newBounty = new Bounty(req.body);
-  newBounty.save((err, savedBounty) => {
+
+bountyRouter.post('/', (req, res) => {
+  const newBounty = new Bounty(req.body)
+  newBounty.save((err, newBounty) => {
+    if(err) return res.status(500).send(err)
+    return res.status(201).send(newBounty)
+  })
+})
+
+bountyRouter.delete('/:id', (req, res) => {
+  Bounty.findByIdAndRemove(req.params.id, (err, deletedBounty) => {
+    if(err) return res.status(500).send(err)
+    return res.send({ message: "bounty was succesfully killed", deletedBounty})
+  })
+})
+
+bountyRouter.put('/:id', (req, res) => {
+  Bounty.findByIdAndUpdate(
+    { _id: req.params.id },
+    req.body,
+    {new: true},
+    (err, updatedBounty) => {
       if(err) return res.status(500).send(err);
-      return res.send(savedBounty)
-  })
+      return res.send(updatedBounty)
+    }
+  )
 })
 
-bountyRoutes.route('/:id')
-.get((req, res) => {
-  Bounty.findOne({ _id: req.params.id }, (err, foundBounty) => {
-        if(err) return res.status(500).send(err);
-        return res.send(foundBounty);
-  })
-})
-.put((req, res) => {
-  Bounty.findByIdAndUpdate(req.params.id, req.body, (err, updatedBounty) => {
-    if(err) return res.status(500).send(err);
-    return res.status(201).send(updatedBounty)
-  })
-})
-.delete((req, res) => {
-  Bounty.findByIdAndRemove(req.params.id, (err, removedBounty) => {
-    if(err) return res.status(500).send(err);
-    return res.send(removedBounty)
-  })
-})
-
-module.exports = bountyRoutes;
+module.exports = bountyRouter
