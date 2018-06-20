@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { getStory, addStory } from './redux'
 import Story from './Story'
-import Comment from './Comment'
+
 
 class App extends React.Component {
     constructor() {
@@ -10,10 +10,11 @@ class App extends React.Component {
         this.state = {
             title: '',
             description: '',
-            comments: [{
+            votes: 0,
+            comments: {
                 name: '',
                 body: ''
-            }]
+            }
         }
     }
     componentDidMount() {
@@ -32,10 +33,11 @@ class App extends React.Component {
             description: this.state.description
         }
         this.props.addStory(newStory)
-        this.setState({ title: '', description: '', comments:[{ name: '', body: ''}]})
+        this.setState({ title: '', description: '', comments:{ name: '', body: ''}})
     }
 
     render() {
+        console.log(this.props)
         return (
             <div>
                 <form onSubmit={ this.handleSubmit }>
@@ -54,13 +56,10 @@ class App extends React.Component {
                         <button>Submit</button>
                         </form>
                 {this.props.story.map(stories => 
-                <div>
                 <Story key={stories._id} id={stories._id} 
-                title={ stories.title } description={ stories.description } 
-                name={ stories.comments.name } body={ stories.comments.body } />
-                <Comment key={stories._id} id={stories._id}
-                name={ stories.comments.name } body = { stories.comments.body } />
-                </div> )}
+                title={ stories.title } description={ stories.description }
+                comments={ stories.comments} votes={ stories.votes }/>)}
+                
             </div>
         )
     }

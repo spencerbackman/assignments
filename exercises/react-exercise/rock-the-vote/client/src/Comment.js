@@ -8,9 +8,9 @@ class Comment extends React.Component {
         this.state = {           
          comments: [{
             name: '',
-            body: '',
-            isToggled: false
+            body: ''
         }],
+        isToggled: false
         }
     }
     handleChange = e => {
@@ -22,17 +22,48 @@ class Comment extends React.Component {
     handleSubmit = e => {
         e.preventDefault()
         const newStory = {
-            title: this.state.title,
-            description: this.state.description
+            name: this.state.name,
+            body: this.state.body
         }
-        this.props.editStory( this.props.id, newStory)
+        this.props.addComment( this.props.id, newStory)
         this.setState({ isToggled:false, name: '', body: ''})
     }
+    toggle = () => {
+        this.setState(prevState => {
+            return {
+                isToggled: !prevState.isToggled
+            }
+        })
+    }
     render(){
+        console.log(this.props)
         return(
-            <div>
+        <div>
+        <div>          
+            <p> { this.props.name } </p>
+            <p> { this.props.body } </p>
 
-            </div>
+        </div>
+        <button onClick={this.toggle }>Comment</button>
+                { this.state.isToggled 
+                ? <form onSubmit={ this.handleSubmit }>
+                    <input 
+                        type="text"
+                        value={ this.state.name } 
+                        name="name"
+                        placeholder="name"
+                        onChange={this.handleChange} />
+                    <input 
+                        type="text"
+                        value={ this.state.body}
+                        name="comment"
+                        placeholder="comment"
+                        onChange={ this.handleChange } />
+                    <button onSubmit={ this.handleSubmit }>submit</button>
+                    </form>
+                    :null
+                } 
+        </div>
         )
     }
 }

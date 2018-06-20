@@ -13,10 +13,10 @@ export const getStory = () => {
     }
 }
 
-export const addComment = newComment => {
+export const addComment = (newComment, id) => {
     return dispatch => {
-        axios.post(`/story/:id/comments`).then(response => {
-            dispatch(getStory())
+        axios.post(`/story/${id}/${newComment}`).then(response => {
+           dispatch(getStory())
         }).catch(err => {
             console.log(err)
         })
@@ -51,7 +51,7 @@ export const editStory = (id, newStory) => {
             console.log(err)
         })
     }
-}
+}=
 
 const reducer = (state = [], action) => {
     switch (action.type) {

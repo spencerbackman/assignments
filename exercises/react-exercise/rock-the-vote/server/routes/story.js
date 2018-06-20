@@ -33,9 +33,9 @@
         {_id: req.params.id },
         req.body,
         {new: true},
-        (err, updatedStory) => {
+        (err, updateStory) => {
             if(err) return res.status(500).send(err)
-            return res.send(updatedStory)
+            return res.send(updateStory)
         }
     )
 })

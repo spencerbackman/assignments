@@ -11,8 +11,7 @@ const storySchema = new Schema({
         required: true
     },
     votes: {
-        type: Number,
-        default: 0
+        type: Number
     },
     comments: [{
         name: String,
