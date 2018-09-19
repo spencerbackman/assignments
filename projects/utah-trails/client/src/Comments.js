@@ -22,6 +22,7 @@ handleChange = (e) => {
   this.setState({
     [name]: value
   })
+  console.log(this.getState())
 }
 
 handleSubmit = e => {
@@ -61,12 +62,6 @@ render() {
           value={this.state.body}
           name="body"
           placeholder="comment"
-          onChange={this.handleChange} />
-        <input
-          type="text"
-          value={this.state.date}
-          name="date"
-          placeholder="date"
           onChange={this.handleChange} />
           <button>Submit</button>
       </form>

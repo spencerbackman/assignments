@@ -13,15 +13,15 @@ export const getBounties = () => {
     }
 }
 
-// export const addBounty = newBounty => {
-//     return dispatch => {
-//         axios.post('/bounty', newBounty).then(response => {
-//             dispatch(getBounties())
-//         }).catch(err => {
-//             console.log(err)
-//         })
-//     }
-// }
+export const addBounty = newBounty => {
+    return dispatch => {
+        axios.post('/bounty', newBounty).then(response => {
+            dispatch(getBounties())
+        }).catch(err => {
+            console.log(err)
+        })
+    }
+}
 
 // export const deleteBounty = id => {
 //     return dispatch => {

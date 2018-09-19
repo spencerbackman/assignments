@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { getBounties } from './redux'
+import { getBounties, addBounty } from './redux'
 import Bounty from './Bounty'
-//, addBounty
+
 class App extends React.Component {
   constructor() {
     super();
@@ -53,11 +53,12 @@ class App extends React.Component {
             name="payout"
             placeholder="payout"
             onChange={ this.handleChange } />
+            <button>Submit</button>
           </form>
         </div>
     )
   }
 }
 
-export default connect(state => ({bounty: state}), ) (App);
+export default connect(state => ({bounty: state}), {getBounties, addBounty}) (App);
 //{ getBounties, addBounty}

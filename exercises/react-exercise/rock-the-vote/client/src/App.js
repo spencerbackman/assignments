@@ -40,26 +40,10 @@ class App extends React.Component {
         console.log(this.props)
         return (
             <div>
-                <form onSubmit={ this.handleSubmit }>
-                    <input 
-                        type="text"
-                        value={ this.state.title }
-                        name="title"
-                        placeholder="title"
-                        onChange={ this.handleChange } />
-                    <input 
-                        type="text"
-                        value={ this.state.description }
-                        name="description"
-                        placeholder="description"
-                        onChange={ this.handleChange } />
-                        <button>Submit</button>
-                        </form>
                 {this.props.story.map(stories => 
                 <Story key={stories._id} id={stories._id} 
                 title={ stories.title } description={ stories.description }
                 comments={ stories.comments} votes={ stories.votes }/>)}
-                
             </div>
         )
     }

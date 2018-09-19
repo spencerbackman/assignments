@@ -14,7 +14,6 @@ export const getComments = () => {
 }
 
 export const getTrails = () => {
-
   return dispatch => {
     axios.get('/hiking/trail_ids').then(response => {
       dispatch({
@@ -26,11 +25,9 @@ export const getTrails = () => {
 }
 
 
-
-
 export const addComment = newComment => {
   return dispatch => {
-    axios.post('/hiking', newComment).then(response => {
+    axios.post(`/hiking/${newComment}`).then(response => {
       dispatch(getComments())
     }).catch(err => {
       console.log(err)
@@ -49,7 +46,8 @@ export const deleteComment = id => {
 }
 
 const initialState = {
-  places: []
+  places: [],
+  comments: []
 }
 
 const reducer = (state = initialState, action) => {

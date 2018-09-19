@@ -17,7 +17,7 @@ hikeRouter.get('/trail_ids', (req, res) => {
   })
 })
 
-hikeRouter.put('/:id/comments', (req, res) => {
+hikeRouter.post('/comments', (req, res) => {
   Hiking.findByIdAndUpdate(
     {_id: req.params.id},
     {$push: {comments: req.body}},
@@ -29,13 +29,13 @@ hikeRouter.put('/:id/comments', (req, res) => {
   )
 })
 
-hikeRouter.post('/', (req, res) => {
-  const newHike = new Hiking(req.body)
-  newHike.save((err, newHike) => {
-    if(err) return res.status(500).send(err);
-    return res.status(201).send(newHike);
-  })
-})
+// hikeRouter.post('/', (req, res) => {
+//   const newHike = new Hiking(req.body)
+//   newHike.save((err, newHike) => {
+//     if(err) return res.status(500).send(err);
+//     return res.status(201).send(newHike);
+//   })
+// })
 
 hikeRouter.put('/:id', (req, res) => {
   Hiking.findByIdAndUpdate(

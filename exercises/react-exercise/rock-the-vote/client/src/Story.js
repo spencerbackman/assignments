@@ -25,6 +25,20 @@ class Story extends React.Component {
             [name]: value
         })
     }
+    handleUpVotes = e => {
+        e.preventDefault();
+        const upVote = {
+            votes: this.state.votes += 1
+        }
+        this.props.editStory(this.props.id, upVote)
+    }
+    handleDownVotes = e => {
+        e.preventDefault();
+        const downVote = {
+            votes: this.state.votes -= 1
+        }
+        this.props.editStory(this.props.id, downVote)
+    }
 
     handleSubmit = e => {
         e.preventDefault()
@@ -43,31 +57,18 @@ class Story extends React.Component {
             }
         })
     }
-
-    upVote = () => {
-
-    }
-    downVote = () => {
-        return this.props.votes -= 1
-    }
-
     render() {
         console.log(this.props)
         return (
             <div>
                 <h1> { this.props.title} </h1>
                 <p> { this.props.description } </p>
-                <h3> { this.props.votes } </h3>
+                <h3> { this.state.votes } </h3>
 
-     
-                <div> { this.props.comments.map(comment => 
-                    <Comment key={comment._id} id={comment._id}
-                    name={comment.name} body={comment.body}
-                   /> )}
-
+                <div> 
                 <button onClick={ () => this.props.deleteStory(this.props.id) } >Delete</button>
-                <button onClick={ this.upVote } >Up Vote</button>
-                <button onClick={ this.downVote } >Down Vote</button>
+                <button onClick={ this.handleUpVotes } >Up Vote</button>
+                <button onClick={ this.handleDownVotes } >Down Vote</button>
                 <button onClick={ this.toggle } >Edit</button>
                 { this.state.isToggled
                 ?<form onSubmit={ this.handleSubmit }>

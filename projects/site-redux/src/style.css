@@ -1,0 +1,128 @@
+* {
+    font-family: monospace;
+}
+
+body {
+  background-color: #efd6b6
+}
+
+.menu {
+  text-decoration: none;
+  color: black;
+}
+
+.home {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.main {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  top: 0;
+  font-size: 24px;
+}
+
+.got {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.about-jon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+
+}
+
+.jon-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: 250px;
+  height: 250px;
+}
+
+.winterfell-house {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  color: white;
+  background-image: url("./images/winter.jpeg");
+  text-justify: center;
+  width: 350px;
+  background-size: 400px;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  background-image: url("./images/game.jpeg");
+  color: white;
+  margin-bottom: 50px;
+  width: 350px;
+  text-justify: center;
+}
+
+.jokes-quotes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.joke {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.dad-jokes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.ron-quotes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.but {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  color: #efd6b6;
+  background-color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  *{
+    width: 95%;
+    margin-left: 1%;
+  }
+}

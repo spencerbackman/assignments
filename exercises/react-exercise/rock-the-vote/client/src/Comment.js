@@ -3,16 +3,7 @@ import { connect } from 'react-redux'
 import { addComment } from './redux'
 
 class Comment extends React.Component {
-    constructor() {
-        super()
-        this.state = {           
-         comments: [{
-            name: '',
-            body: ''
-        }],
-        isToggled: false
-        }
-    }
+
     handleChange = e => {
         const { name, value } = e.target
         this.setState({
@@ -42,7 +33,6 @@ class Comment extends React.Component {
         <div>          
             <p> { this.props.name } </p>
             <p> { this.props.body } </p>
-
         </div>
         <button onClick={this.toggle }>Comment</button>
                 { this.state.isToggled 
