@@ -7,7 +7,7 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 app.use(morgan('dev'))
 
-mongoose.connect('mongodb://localhost/taskmanager', err => {
+mongoose.connect('mongodb://localhost/tastmanager', err => {
     if(err) throw err
     console.log('connected to the database')
 })

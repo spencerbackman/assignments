@@ -17,5 +17,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:7000"
+  "proxy": "http://localhost:7000",
+  "devDependencies": {
+    "case-sensitive-paths-webpack-plugin": "^2.1.2"
+  }
 }
