@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'React'
 import { getTrails } from './redux/trails.js';
 import { connect } from 'react-redux';
 import Traildisplay from './Traildisplay';

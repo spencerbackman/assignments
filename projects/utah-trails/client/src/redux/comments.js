@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const getComments = () => {
+export function getComments(){
     return dispatch => {
         axios.get('/hiking').then(response => {
             dispatch({
@@ -11,7 +11,7 @@ export const getComments = () => {
     }
 }
   
-export const addComment = (newComment) => {
+export function addComment(newComment){
     return dispatch => {
         axios.post('/hiking', newComment).then(response => {
             dispatch(getComments())

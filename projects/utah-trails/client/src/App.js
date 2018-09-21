@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'React';
 import {connect} from 'react-redux';
 import Comments from './Comments.js';
 import Trails from './Trails.js';

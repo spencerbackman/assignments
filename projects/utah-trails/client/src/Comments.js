@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'React'
 import { connect } from 'react-redux'
 import { getComments } from './redux/comments.js'
 import Commentdisplay from './Commentdisplay'
@@ -20,4 +20,4 @@ class Comments extends React.Component {
     }
 }
 
-export default connect(state => {comments: state}, {getComments})(Comments)
+export default connect(state => state, {getComments})(Comments)
